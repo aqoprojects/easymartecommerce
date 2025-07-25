@@ -1,0 +1,215 @@
+import { GoArrowRight } from "react-icons/go";
+import { MdArrowBackIosNew } from "react-icons/md";
+import { MdArrowForwardIos } from "react-icons/md";
+
+const TrendingStore = () => {
+  return (
+    <article className="mx-4 px-5 py-8 ring-1  ring-gray-200 rounded-2xl">
+      <section className="w-full flex  justify-between items-center px-4 mb-5">
+        <h2 className="text-[clamp(1.3rem,3vw,2rem)] font-semibold">Trending Store</h2>
+
+        <div className="flex gap-10 items-center-safe justify-center-safe ">
+          <button className="flex gap-2 items-center-safe justify-center-safe ring-1 ring-[#DE57C4] py-2 px-2 rounded-full font-semibold text-[clamp(0.6rem,3vw,1.1rem)]">
+            View All (+40)
+            <GoArrowRight className="hidden md:block size-6"/>
+            <MdArrowForwardIos className="block md:hidden"/>
+          </button>
+
+        </div>
+        
+      </section>
+
+      <section className=" flex  justify-between items-center mb-5">
+        <div className="w-full flex justify-between items-center-safe  ">
+          <div className="flex text-nowrap gap-2 overflow-auto py-1 px-1 lg:flex-wrap lg:overflow-visible lg:max-w-180 no-scrollbar">
+            <button className="px-4 py-2 ring-1 ring-gray-200 hover:ring-[#DE57C4] rounded-full">Fresh bakery</button>
+            <button className="px-4 py-2 ring-1 ring-gray-200 hover:ring-[#DE57C4] rounded-full">Fresh bakery</button>
+            <button className="px-4 py-2 ring-1 ring-gray-200 hover:ring-[#DE57C4] rounded-full">Fresh bakery</button>
+            <button className="px-4 py-2 ring-1 ring-gray-200 hover:ring-[#DE57C4] rounded-full">Fresh bakery</button>
+            <button className="px-4 py-2 ring-1 ring-gray-200 hover:ring-[#DE57C4] rounded-full">Fresh bakery</button>
+            <button className="px-4 py-2 ring-1 ring-gray-200 hover:ring-[#DE57C4] rounded-full">Fresh bakery</button>
+            <button className="px-4 py-2 ring-1 ring-gray-200 hover:ring-[#DE57C4] rounded-full">Fresh bakery</button>
+            <button className="px-4 py-2 ring-1 ring-gray-200 hover:ring-[#DE57C4] rounded-full">Fresh bakery</button>
+            <button className="px-4 py-2 ring-1 ring-gray-200 hover:ring-[#DE57C4] rounded-full">Fresh bakery</button>
+            <button className="px-4 py-2 ring-1 ring-gray-200 hover:ring-[#DE57C4] rounded-full">Fresh bakery</button>
+          </div>
+          
+          <div className="hidden lg:block">
+            <button className="ring-1 ring-black/10 p-2 rounded-full bg-black/3 mr-4">
+              <MdArrowBackIosNew className="size-7 text-gray-400" />
+              </button>
+            <button className="ring-1 ring-black/10 p-2 rounded-full ">
+            <MdArrowForwardIos className="size-7 " />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <section className="mt-2">
+        <div className="w-full grid grid-flow-col gap-5 overflow-x-auto snap-x snap-mandatory no-scrollbar">
+          <div className="min-w-60">
+            <div className="bg-[#FEF5FD] w-auto h-60 grid place-content-center-safe rounded-3xl mb-3">
+              <img src="../../src/assets/images/products/orange.png" className="object-contain object-center" alt="orange" />
+              
+            </div>
+            <div>
+              <h4 className="text-2xl font-medium mb-4">This is product a</h4>
+
+              <div>
+                <p className="text-md font-normal">$2.71/lb</p>
+                <div className="flex gap-3 text-xl items-baseline mb-2">
+                  <p className="font-light text-2xl">$99.99</p>
+                  <p className="line-through text-md text-gray-700">$99.99</p>
+                </div>
+                <div className="flex gap-8 text-lg font-light">
+                  <p className="text-[#A02B84]">12 Left</p>
+                  <p>12 Left</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        <div className="min-w-60">
+            <div className="bg-[#FEF5FD] w-auto h-60 grid place-content-center-safe rounded-3xl mb-3">
+              <img src="../../src/assets/images/products/berry.png" className="object-contain object-center" alt="orange" />
+              
+            </div>
+            <div>
+              <h4 className="text-2xl font-medium mb-4">This is product a</h4>
+
+              <div>
+                <p className="text-md font-normal">$2.71/lb</p>
+                <div className="flex gap-3 text-xl items-baseline mb-2">
+                  <p className="font-light text-2xl">$99.99</p>
+                  <p className="line-through text-md text-gray-700">$99.99</p>
+                </div>
+                <div className="flex gap-8 text-lg font-light">
+                  <p className="text-[#A02B84]">12 Left</p>
+                  <p>12 Left</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div className="min-w-60">
+            <div className="bg-[#FEF5FD] w-auto h-60 grid place-content-center-safe rounded-3xl mb-3">
+              <img src="../../src/assets/images/products/orange.png" className="object-contain object-center" alt="orange" />
+              
+            </div>
+            <div>
+              <h4 className="text-2xl font-medium mb-4">This is product a</h4>
+
+              <div>
+                <p className="text-md font-normal">$2.71/lb</p>
+                <div className="flex gap-3 text-xl items-baseline mb-2">
+                  <p className="font-light text-2xl">$99.99</p>
+                  <p className="line-through text-md text-gray-700">$99.99</p>
+                </div>
+                <div className="flex gap-8 text-lg font-light">
+                  <p className="text-[#A02B84]">12 Left</p>
+                  <p>12 Left</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div className="min-w-60">
+            <div className="bg-[#FEF5FD] w-auto h-60 grid place-content-center-safe rounded-3xl mb-3">
+              <img src="../../src/assets/images/products/lime.png" className="object-contain object-center" alt="orange" />
+              
+            </div>
+            <div>
+              <h4 className="text-2xl font-medium mb-4">This is product a</h4>
+
+              <div>
+                <p className="text-md font-normal">$2.71/lb</p>
+                <div className="flex gap-3 text-xl items-baseline mb-2">
+                  <p className="font-light text-2xl">$99.99</p>
+                  <p className="line-through text-md text-gray-700">$99.99</p>
+                </div>
+                <div className="flex gap-8 text-lg font-light">
+                  <p className="text-[#A02B84]">12 Left</p>
+                  <p>12 Left</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div className="min-w-60">
+            <div className="bg-[#FEF5FD] w-auto h-60 grid place-content-center-safe rounded-3xl mb-3">
+              <img src="../../src/assets/images/products/orange.png" className="object-contain object-center" alt="orange" />
+              
+            </div>
+            <div>
+              <h4 className="text-2xl font-medium mb-4">This is product a</h4>
+
+              <div>
+                <p className="text-md font-normal">$2.71/lb</p>
+                <div className="flex gap-3 text-xl items-baseline mb-2">
+                  <p className="font-light text-2xl">$99.99</p>
+                  <p className="line-through text-md text-gray-700">$99.99</p>
+                </div>
+                <div className="flex gap-8 text-lg font-light">
+                  <p className="text-[#A02B84]">12 Left</p>
+                  <p>12 Left</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div className="min-w-60">
+            <div className="bg-[#FEF5FD] w-auto h-60 grid place-content-center-safe rounded-3xl mb-3">
+              <img src="../../src/assets/images/products/berry.png" className="object-contain object-center" alt="orange" />
+              
+            </div>
+            <div>
+              <h4 className="text-2xl  mb-4">This is product a</h4>
+
+              <div>
+                <p className="text-lg font-normal">$2.71/lb</p>
+                <div className="flex gap-3 text-lg items-baseline mb-2">
+                  <p className="font-light text-2xl">$99.99</p>
+                  <p className="line-through text-gray-700">$99.99</p>
+                </div>
+                <div className="flex gap-8 text-xl font-normal">
+                  <p className="text-[#A02B84]">12 Left</p>
+                  <p>12 Left</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div className="min-w-60">
+            <div className="bg-[#FEF5FD] w-auto h-60 grid place-content-center-safe rounded-3xl mb-3">
+              <img src="../../src/assets/images/products/lime.png" className="object-contain object-center" alt="orange" />
+              
+            </div>
+            <div>
+              <h4 className="text-2xl font-medium mb-4">This is product a</h4>
+
+              <div>
+                <p className="text-md font-normal">$2.71/lb</p>
+                <div className="flex gap-3 text-xl items-baseline mb-2">
+                  <p className="font-light text-2xl">$99.99</p>
+                  <p className="line-through text-md text-gray-700">$99.99</p>
+                </div>
+                <div className="flex gap-8 text-lg font-light">
+                  <p className="text-[#A02B84]">12 Left</p>
+                  <p>12 Left</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </section>
+
+    </article>
+  )
+}
+
+export default TrendingStore
