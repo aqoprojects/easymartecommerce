@@ -1,4 +1,5 @@
 import { MdArrowForwardIos } from "react-icons/md";
+import XsProductDetail from "./ProductComponents/XsProductDetail";
 
 const Discount2 = () => {
   return (
@@ -6,72 +7,9 @@ const Discount2 = () => {
       
         <section className='w-full flex flex-wrap-reverse lg:flex-nowrap gap-4 justify-evenly bg-[#F5FBF5] px-4 py-10 rounded-2xl'>
           <div className="w-full grid grid-flow-col gap-5 overflow-x-auto snap-x snap-mandatory lg:overflow-visible  no-scrollbar">
-            <div className="min-w-50">
-              <div className="bg-white w-auto h-58 grid place-content-center-safe rounded-3xl mb-3">
-                <img src="../../src/assets/images/products/orange.png" className="object-contain object-center" alt="orange" />
-        
-              </div>
-              <div>
-                <h4 className="text-xl font-medium mb-4">This is product a</h4>
-        
-                <div>
-                  <p className="text-sm font-normal">$2.71/lb</p>
-                  <div className="flex gap-3 text-md items-baseline mb-2">
-                    <p className="font-medium text-xl">$99.99</p>
-                    <p className="line-through text-gray-700">$99.99</p>
-                  </div>
-                  <div className="flex gap-8 text-md font-normal">
-                    <p className="text-[#A02B84]">12 Left</p>
-                    <p>12 Left</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-        
-        
-            <div className="min-w-50">
-              <div className="bg-white w-auto h-58 grid place-content-center-safe rounded-3xl mb-3">
-                <img src="../../src/assets/images/products/berry.png" className="object-contain object-center" alt="orange" />
-        
-              </div>
-              <div>
-                <h4 className="text-xl font-medium mb-4">This is product a</h4>
-        
-                <div>
-                  <p className="text-sm font-normal">$2.71/lb</p>
-                  <div className="flex gap-3 text-md items-baseline mb-2">
-                    <p className="font-medium text-xl">$99.99</p>
-                    <p className="line-through text-gray-700">$99.99</p>
-                  </div>
-                  <div className="flex gap-8 text-md font-normal">
-                    <p className="text-[#A02B84]">12 Left</p>
-                    <p>12 Left</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-        
-            <div className="min-w-50">
-              <div className="bg-white w-auto h-58 grid place-content-center-safe rounded-3xl mb-3">
-                <img src="../../src/assets/images/products/orange.png" className="object-contain object-center" alt="orange" />
-        
-              </div>
-              <div>
-                <h4 className="text-xl font-medium mb-4">This is product a</h4>
-        
-                <div>
-                  <p className="text-sm font-normal">$2.71/lb</p>
-                  <div className="flex gap-3 text-md items-baseline mb-2">
-                    <p className="font-medium text-xl">$99.99</p>
-                    <p className="line-through text-gray-700">$99.99</p>
-                  </div>
-                  <div className="flex gap-8 text-md font-normal">
-                    <p className="text-[#A02B84]">12 Left</p>
-                    <p>12 Left</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <XsProductDetail/>
+            <XsProductDetail/>
+            <XsProductDetail/>
         
           </div>
         
