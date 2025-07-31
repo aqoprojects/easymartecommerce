@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import ProductSearchPage from './pages/ProductSearchPage';
 import ProductCategoryPage from './pages/ProductCategoryPage';
 import ProductPage from './pages/ProductPage';
+import ProductCartPage from './pages/ProductCartPage';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path='/search' element={<ProductSearchPage/>}/>
         <Route path='/category' element={<ProductCategoryPage/>}/>
         <Route path='/product' element={<ProductPage/>}/>
+        <Route path='/product-cart' element={<ProductCartPage/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>
