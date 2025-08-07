@@ -6,6 +6,10 @@ import ProductSearchPage from './pages/ProductSearchPage';
 import ProductCategoryPage from './pages/ProductCategoryPage';
 import ProductPage from './pages/ProductPage';
 import ProductCartPage from './pages/ProductCartPage';
+import CheckoutPage from './pages/CheckoutPage';
+import OrderPage from './pages/OrderPage';
+import Account from './pages/Account';
+import PageNotFound from './pages/PageNotFound';
 
 function App() {
 
@@ -19,8 +23,13 @@ function App() {
         <Route path='/category' element={<ProductCategoryPage/>}/>
         <Route path='/product' element={<ProductPage/>}/>
         <Route path='/product-cart' element={<ProductCartPage/>}/>
+        <Route path='/checkout' element={<CheckoutPage/>}/>
+        <Route path='/order' element={<OrderPage/>}/>
+        <Route path='/account/*' element={<Account/>} />
+        <Route path='/*' element={<PageNotFound/>} />
       </Routes>
       <Footer/>
+      
     </BrowserRouter>
   )
 }

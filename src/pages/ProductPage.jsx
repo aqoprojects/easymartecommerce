@@ -8,8 +8,7 @@ import { GiRoundStar } from "react-icons/gi";
 import { SlArrowUp } from "react-icons/sl";
 import { SlArrowDown } from "react-icons/sl";
 import ProductDetail from "../components/ProductComponents/ProductDetail";
-import { MdArrowBackIosNew } from "react-icons/md";
-import { MdArrowForwardIos } from "react-icons/md";
+
 
 
 

@@ -29,7 +29,7 @@ const ProductSearchPage = () => {
         <ProductDetail fillWidth={'flex-1 max-w-80'} />
       </section>
 
-      <section className="w-full flex justify-center-safe items-center-safe gap-3 mt-15 mb-10">
+      {/* <section className="w-full flex justify-center-safe items-center-safe gap-3 mt-15 mb-10">
         <button className="bg-[#A02B84]/50 text-white px-4 py-1 font-semibold rounded-sm text-lg" disabled>Previous</button>
         <button className="bg-[#A02B84] text-white px-4 py-1 font-semibold rounded-sm text-lg">1</button>
         <button className="bg-[#A02B84] text-white px-4 py-1 font-semibold rounded-sm text-lg">2</button>
@@ -37,7 +37,7 @@ const ProductSearchPage = () => {
         <button className="bg-[#A02B84] text-white px-4 py-1 font-semibold rounded-sm text-lg">4</button>
         <button className="bg-[#A02B84] text-white px-4 py-1 font-semibold rounded-sm text-lg">5</button>
         <button className="bg-[#A02B84] text-white px-4 py-1 font-semibold rounded-sm text-lg">Next</button>
-      </section>
+      </section> */}
     </article>
   )
 }
