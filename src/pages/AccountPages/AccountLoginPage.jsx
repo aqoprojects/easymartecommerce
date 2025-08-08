@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import Logo from '/Logo.png';
 import { AiOutlineMail } from "react-icons/ai";
 import { PiPhoneLight } from "react-icons/pi";
@@ -8,6 +8,13 @@ import { FaGoogle } from "react-icons/fa";
 
 
 const AccountLoginPage = () => {
+  const navigate = useNavigate()
+  const handleLogin = (e)=>{
+    e.preventDefault()
+    navigate('/account')
+  }
+
+
   return (
     <>
     <header className='max-auto py-3 shadow-xs shadow-black/10'>
@@ -30,11 +37,11 @@ const AccountLoginPage = () => {
              <button className="flex gap-2 items-center-safe text-black/30 bg-black/4 px-5 py-2.5 rounded-xl font-semibold"> <PiPhoneLight className="size-6" />Phone</button>
           </div>
 
-          <div>
+          <form onSubmit={handleLogin}>
             <p className='font-semibold text-lg mb-1'>Email</p>
-            <input type="text" className='ring-1 ring-black/10 w-full py-3 px-4 bg-white rounded-lg mb-8' placeholder='Enter your email' />
-             <button className="bg-[#B6349A] text-white flex gap-2 py-2.5 w-full px-8 justify-center-safe items-center-safe font-semibold text-lg rounded-4xl">Coutinue <BsArrowRight className="size-5" /> </button>
-          </div>
+            <input type="text" className='ring-1 ring-black/10 outline-none w-full py-3 px-4 bg-white rounded-lg mb-8' placeholder='Enter your email' />
+             <button className="bg-[#B6349A] outline-none text-white flex gap-2 py-2.5 w-full px-8 justify-center-safe items-center-safe font-semibold text-lg rounded-4xl">Coutinue <BsArrowRight className="size-5"  /> </button>
+          </form>
           
         </div>
 

@@ -6,6 +6,7 @@ import { BsFillCheckCircleFill } from "react-icons/bs";
 import { LiaArrowLeftSolid } from "react-icons/lia";
 import { LiaArrowRightSolid } from "react-icons/lia";
 import { MdLocationPin } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 
 
 const OrderPage = () =>
@@ -17,10 +18,10 @@ const OrderPage = () =>
           <div className="p-2 rounded-full ring-1 ring-black/10">
             <BsArrowLeft className="size-5 md:size-7" />
           </div>
-          <button className="flex gap-2 items-center-safe justify-center-safe px-3.5 py-2 rounded-3xl ring-1 ring-[#DE57C4] font-semibold text-[clamp(1rem,3vw,1.2rem)]">
+          <NavLink to={"/account/support"} className="flex gap-2 items-center-safe justify-center-safe px-3.5 py-2 rounded-3xl ring-1 ring-[#DE57C4] font-semibold text-[clamp(1rem,3vw,1.2rem)]">
             <TbMessage2 className="size-6"/>
             Help
-          </button>
+          </NavLink>
         </div>
       </section>
 

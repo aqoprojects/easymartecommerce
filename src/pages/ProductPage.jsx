@@ -8,6 +8,7 @@ import { GiRoundStar } from "react-icons/gi";
 import { SlArrowUp } from "react-icons/sl";
 import { SlArrowDown } from "react-icons/sl";
 import ProductDetail from "../components/ProductComponents/ProductDetail";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -18,11 +19,11 @@ const ProductPage = () =>
     <article className='min-h-100 px-2 md:px-15 pt-8'>
       <section className='w-full'>
         <div className='text-gray-600 font-medium text-lg flex gap-1 items-center-safe'>
-          <a href="">Home</a>
+          <NavLink to={"/"}>Home</NavLink>
           <MdOutlineKeyboardArrowRight className="text-gray-300" />
-          <a href="">Product</a>
+          <NavLink to={"/category/bread"}>Product Category</NavLink>
           <MdOutlineKeyboardArrowRight className="text-gray-300" />
-          <a href="" className="text-[#A02B84]">Orange</a>
+          <p className="text-[#A02B84]">Orange</p>
         </div>
       </section>
 

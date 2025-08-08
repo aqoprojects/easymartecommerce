@@ -2,9 +2,44 @@ import { GoArrowRight } from "react-icons/go";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
 import ProductDetail from "./ProductComponents/ProductDetail";
+import { useEffect, useRef, useState } from "react";
 
 const BestSeller = () =>
 {
+  const scrollRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(true)
+
+  const checkScrollPosition = ()=>{
+    if(scrollRef.current) {
+      const {scrollLeft, scrollWidth, clientWidth} = scrollRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1)
+    }
+  }
+
+
+  useEffect(()=>{
+    const scrollContainer = scrollRef.current
+    scrollContainer.addEventListener('scroll', checkScrollPosition)
+    checkScrollPosition();
+
+    return () => scrollContainer.removeEventListener('scroll', checkScrollPosition);
+  }, [])
+
+  const scrollForward = ()=> {
+    if(scrollRef.current && canScrollRight){
+      scrollRef.current.scrollBy({ left: 200, behavior: 'smooth'})
+    }
+  };
+
+  const scrollBackward = ()=> {
+    if(scrollRef.current && canScrollLeft){
+      scrollRef.current.scrollBy({ left: -200, behavior: 'smooth'})
+    }
+  };
+
+
   return (
     <article className=" px-4 mb-30">
       <section className="w-full flex justify-between items-center mb-5">
@@ -18,10 +53,12 @@ const BestSeller = () =>
           </button>
 
           <div className="hidden md:block">
-            <button className="ring-1 ring-black/10 p-2 rounded-full bg-black/3 mr-4">
-              <MdArrowBackIosNew className="size-7 text-gray-400" />
+            <button className={`ring-1 ring-black/10 p-2  ${!canScrollLeft&& 'bg-black/3 text-gray-400'} rounded-full  mr-4`} onClick={scrollBackward} 
+        disabled={!canScrollLeft}>
+              <MdArrowBackIosNew className="size-7"/>
             </button>
-            <button className="ring-1 ring-black/10 p-2 rounded-full ">
+            <button className={`ring-1 ring-black/10 ${!canScrollRight && 'bg-black/3 text-gray-400'} p-2 rounded-full`}  onClick={scrollForward} 
+        disabled={!canScrollRight}>
               <MdArrowForwardIos className="size-7 " />
             </button>
           </div>
@@ -29,7 +66,7 @@ const BestSeller = () =>
       </section>
 
       <section className="mt-2">
-        <div className="w-full grid grid-flow-col gap-5 overflow-x-auto snap-x snap-mandatory no-scrollbar">
+        <div className="w-full grid grid-flow-col gap-5 overflow-x-auto snap-x snap-mandatory no-scrollbar" ref={scrollRef}>
           <ProductDetail/>
           <ProductDetail/>
           <ProductDetail/>

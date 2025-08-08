@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 
 
 const ProductDetail = ({fillWidth}) =>
@@ -9,7 +10,9 @@ const ProductDetail = ({fillWidth}) =>
 
       </div>
       <div>
-        <h4 className="text-2xl font-medium mb-4">This is product a</h4>
+        <NavLink to={"/product/34234553"}>
+          <h4 className="text-2xl font-medium mb-4">This is product a</h4>
+        </NavLink>
 
         <div>
                 <p className="text-md font-normal">$2.71/lb</p>

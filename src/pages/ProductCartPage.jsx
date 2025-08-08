@@ -7,9 +7,14 @@ import { GoPlus } from "react-icons/go";
 import { BsCreditCard2Front } from "react-icons/bs";
 import { HiMinus } from "react-icons/hi2";
 import ProductDetail from "../components/ProductComponents/ProductDetail";
+import { useNavigate } from "react-router-dom";
 
 const ProductCartPage = () =>
 {
+  const navigate = useNavigate()
+  const handleCheckout = ()=>{
+    navigate("/order/2345")
+  }
   return (
     <>
       <article className='min-h-100 flex gap-3 pt-15 lg:px-15 md:flex-nowrap flex-wrap'>
@@ -175,7 +180,7 @@ const ProductCartPage = () =>
             </div>
 
             <div className="">
-              <button className="w-full bg-[#B6349A] flex text-white text-xl font-normal gap-2 items-center-safe justify-baseline px-5 py-3 rounded-full">
+              <button className="w-full bg-[#B6349A] flex text-white text-xl font-normal gap-2 items-center-safe justify-baseline px-5 py-3 rounded-full" onClick={handleCheckout}>
                 <BsCreditCard2Front className="size-7" />
                 <p className="flex-1 text-left">Checkout</p>
                 <p>$134.56</p>

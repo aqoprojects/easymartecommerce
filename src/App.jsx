@@ -11,20 +11,22 @@ import OrderPage from './pages/OrderPage';
 import Account from './pages/Account';
 import PageNotFound from './pages/PageNotFound';
 
+
 function App() {
 
+  
 
   return (
     <BrowserRouter>
       <Header/>
       <Routes>
         <Route index element={<HomePage/>} />
-        <Route path='/search' element={<ProductSearchPage/>}/>
-        <Route path='/category' element={<ProductCategoryPage/>}/>
-        <Route path='/product' element={<ProductPage/>}/>
+        <Route path='/search/:searchName' element={<ProductSearchPage/>}/>
+        <Route path='/category/:categoryName' element={<ProductCategoryPage/>}/>
+        <Route path='/product/:productId' element={<ProductPage/>}/>
         <Route path='/product-cart' element={<ProductCartPage/>}/>
         <Route path='/checkout' element={<CheckoutPage/>}/>
-        <Route path='/order' element={<OrderPage/>}/>
+        <Route path='/order/:orderId' element={<OrderPage/>}/>
         <Route path='/account/*' element={<Account/>} />
         <Route path='/*' element={<PageNotFound/>} />
       </Routes>

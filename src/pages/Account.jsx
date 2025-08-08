@@ -25,11 +25,11 @@ const Account = () => {
       {!NoHeader.includes(location.pathname) && <AccountAsideMenu/>}
       <article className='flex-1'>
         <Routes>
-          <Route path="/" element={<AccountPage/>} />
-          <Route path="/preference" element={<AccountPreferencePage/>} />
-          <Route path="/login" element={<AccountLoginPage/>} />
-          <Route path="/register" element={<AccountRegisterPage/>} />
-          <Route path="/verification" element={<AccountVerificationPage/>} />
+          <Route index  element={<AccountPage/>} />
+          <Route path="preference" element={<AccountPreferencePage/>} />
+          <Route path="login" element={<AccountLoginPage/>} />
+          <Route path="register" element={<AccountRegisterPage/>} />
+          <Route path="verification" element={<AccountVerificationPage/>} />
           <Route path="orders" element={<AccountOrdersPage/>} />
           <Route path="carts" element={<AccountCartPage/>} />
           <Route path="address" element={<AccountAddressPage/>} />
