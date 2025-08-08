@@ -39,7 +39,6 @@ const SearchBar = () =>
     } else {
       document.body.style.overflow = "auto";
     }
-    // Cleanup on component unmount
     return () =>
     {
       document.body.style.overflow = "auto";
@@ -49,14 +48,17 @@ const SearchBar = () =>
   const handleSearchClick = () =>
   {
     setIsSearchActive( true );
-    // window.document.body.style.scrollbarWidth=''
 
   };
 
-  //  onBlur={() => !isMobile && setIsSearchActive( false )}
+  const handleBlur = ()=>{
+    if(!isMobile){
+      setTimeout(()=> setIsSearchActive(false), 150)
+    }
+  }
 
   return (
-    <div className={`${isMobile && isSearchActive ? 'fixed -top-3 ' : 'relative'} flex-auto transition-all bg-white flex w-full lg:w-auto items-center-safe justify-center-safe gap-1 md:px-4 order-last lg:order-none mt-3 lg:mt-0 `}>
+    <div className={`${isMobile && isSearchActive ? 'fixed -top-3 ' : 'relative'} flex-auto transition-all bg-white flex w-full lg:w-auto items-center-safe justify-center-safe gap-1 md:px-4 order-last lg:order-none mt-3 lg:mt-0 `} onBlur={handleBlur}>
       <div className={` ${isMobile && isSearchActive ? 'block' : 'hidden'} `} onClick={() => setIsSearchActive( false )}>
         <RxCross1 className="size-6" />
       </div>
